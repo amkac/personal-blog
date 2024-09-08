@@ -5,6 +5,7 @@ import SiteHeader from '@/components/site-header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { siteConfig } from '@/config/site';
 import { Footer } from '@/components/footer';
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export default function RootLayout({
             <SiteHeader />
             <main className="flex-1"> {children} </main>
             <Footer />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
