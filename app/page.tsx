@@ -3,11 +3,10 @@ import PostItem from '@/components/post-item';
 import { buttonVariants } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { cn, sortPosts } from '@/lib/utils';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
-  const latestPosts = sortPosts(posts).slice(0, 5);
+  const latestPosts = sortPosts(posts.filter((post) => post.published)).slice(0, 5);
   return (
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
