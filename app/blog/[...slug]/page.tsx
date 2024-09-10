@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    authors: { name: siteConfig.author },
+    authors: { name: siteConfig.authorFullName },
     openGraph: {
       title: post.title,
       description: post.description,
